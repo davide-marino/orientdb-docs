@@ -8,13 +8,14 @@ The Vertex and Edge are the main components of a Graph database.  OrientDB suppo
 **Syntax**
 
 ```sql
-CREATE VERTEX [<class>] [CLUSTER <cluster>] [SET <field> = <expression>[,]*]
+CREATE VERTEX [<class>] [CLUSTER <cluster>] [SET <field> = <expression>[,]*]|[CONTENT <json>]
 ```
 
 - **`<class>`** Defines the class to which the vertex belongs.
 - **`<cluster>`** Defines the cluster in which it stores the vertex.
 - **`<field>`** Defines the field you want to set.
 - **`<expression>`** Defines the express to set for the field.
+- **`<json>`** Defines JSON data as an option to set field values.
 
 |----|----|
 | ![NOTE](images/warning.png) | **NOTE**: When using a distributed database, you can create vertexes through two steps (creation and update).  Doing so can break constraints defined at the class-level for vertices.  To avoid these issues, disable constraints in the vertex class.|
